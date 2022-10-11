@@ -1,5 +1,6 @@
 import socket
 import pickle
+# from server import object_structure
 
 
 class Network:
@@ -26,3 +27,10 @@ class Network:
             return pickle.loads(self.client.recv(2048*4))
         except socket.error as e:
             print(e)
+
+    # def sendRefresh(self, dataRefresh):
+    #     try:
+    #         self.client.send(str.encode(dataRefresh))
+    #         return pickle.loads(self.client.recv(2048*4))
+    #     except socket.error as e:
+    #         print(e)
